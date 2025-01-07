@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "lib/brink_loyalty/version"
+
 Gem::Specification.new do |spec|
   spec.name          = "brink_loyalty"
   spec.version       = BrinkLoyalty::VERSION
@@ -19,6 +21,9 @@ Gem::Specification.new do |spec|
     "source_code_uri" => "https://github.com/lunchboxinc/brink_loyalty"
   }
 
-  spec.add_development_dependency "rspec"
+  spec.add_development_dependency 'rspec-rails'
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
+  spec.add_dependency "pry"
+  spec.add_development_dependency "webmock"
 end
