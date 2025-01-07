@@ -22,7 +22,7 @@ Before using the gem, you need to configure it with your API credentials:
 ```ruby
 BrinkLoyalty.configure do |config|
   config.api_key = 'your_api_key'
-  config.api_secret = 'your_api_secret'
+  config.base_url = 'base_url'
 end
 ```
 
@@ -31,7 +31,7 @@ end
 Create a client instance to interact with the API:
 
 ```ruby
-client = BrinkLoyalty::Client.new
+client = BrinkLoyalty.client
 ```
 
 
@@ -39,37 +39,37 @@ client = BrinkLoyalty::Client.new
 
 The gem provides methods to interact with various endpoints:
 
-- **Lookup Order**: 
+- **Lookup Order**:
   ```ruby
   client.lookup(store_id: '123', order_id: '456', body: { ... })
   ```
 
-- **Finalize Order**: 
+- **Finalize Order**:
   ```ruby
   client.finalize(store_id: '123', order_id: '456', body: { ... })
   ```
 
-- **POS Configurations**: 
+- **POS Configurations**:
   ```ruby
   client.pos_configurations(store_id: '123')
   ```
 
-- **Receipt**: 
+- **Receipt**:
   ```ruby
   client.receipt(store_id: '123', order_id: '456', body: { ... })
   ```
 
-- **Redeem Rewards**: 
+- **Redeem Rewards**:
   ```ruby
   client.redeem(store_id: '123', order_id: '456', body: { ... })
   ```
 
-- **Remove Rewards**: 
+- **Remove Rewards**:
   ```ruby
   client.remove_rewards(store_id: '123', order_id: '456', body: { ... })
   ```
 
-- **Validate Order**: 
+- **Validate Order**:
   ```ruby
   client.validate_order(store_id: '123', order_id: '456', body: { ... })
   ```
